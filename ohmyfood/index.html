@@ -5,17 +5,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ohmyfood</title>
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         </head>
 
     <body> 
         <div class="globalcontent">
             <!--Menu de navigation-->
             <header>
-                <nav class="navbar">
+                <nav class="navbar"> 
+                    <i class="fa-solid fa-arrow-left"></i>               
                     <div class="navbar__divlogo">
                         <img src="images/logo/ohmyfood.png" class="divlogo__logo" alt="Folie-Méricourt">
                     </div>
@@ -29,7 +33,7 @@
             <!--content-->
             <main class="maincontent">
                 <!--Réserver-->
-                <section class="maincontent__section">
+                <section class="maincontent__section reservation">
                     <h1 class="section__title">Réservez le menu qui vous convient</h1>
                     <p class="section__p">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
                     <div class="section__button">
@@ -38,9 +42,9 @@
                 </section>
 
                 <!--Fonctionnement-->
-                <section class="maincontent__section">
+                <section class="maincontent__section fonctionnement">
                     <h1 class="section__title">Fonctionnement</h1>
-                    <article class="sectionfonctionnement__article">
+                    <article class="fonctionnement__article">
                         <div class="fonctionnementarticle__number">
                             <p>1</p>
                         </div>
@@ -49,7 +53,7 @@
                             <p>Choisissez un restaurant</p>
                         </div>
                     </article>
-                    <article class="sectionfonctionnement__article">
+                    <article class="fonctionnement__article">
                         <div class="fonctionnementarticle__number">
                             <p>1</p>
                         </div>
@@ -58,7 +62,7 @@
                             <p>Composez votre menu</p>
                         </div>
                     </article>
-                    <article class="sectionfonctionnement__article">
+                    <article class="fonctionnement__article">
                         <div class="fonctionnementarticle__number">
                             <p>1</p>
                         </div>
@@ -72,57 +76,59 @@
                 </section>
 
                 <!--Restaurant-->
-                <section class="maincontent__section">
+                <section class="maincontent__section restaurants">
                     <h1 class="section__title">Restaurant</h1>
-                    <article class="sectionrestaurant__article">
+                    <article class="restaurants__card">
+                        <div class="new__block">
+                            <p>Nouveau</p>
+                        </div>
                         <a href="restaurants/lapalettedugout.html">
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette blanche sur une table en bois">
-                            <div class="new__block">
-                                <p>Nouveau</p>
-                            </div>
-                            <div class="text__block">
+                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette blanche sur une table en bois" class="card__img">
+                            <div class="white__block">
+                                <div class="text__block">
                                 <h2 class="section__subtitle">La palette du goût</h2>
                                 <p class="section__text">Ménilmontant</p>
+                                </div>
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </a>
                     </article>
                 
-                    <article class="sectionrestaurant__article">
+                    <article class="restaurants__card">
+                        <div class="new__block">
+                            <p>Nouveau</p>
+                        </div>
                         <a href="#">
-                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette blanche sur une table grise">
-                            <div class="new__block">
-                                <p>Nouveau</p>
-                            </div>
-                            <div class="text__block">
+                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette blanche sur une table grise" class="card__img">
+                            <div class="white__block">
+                                <div class="text__block">
                                 <h2 class="section__subtitle">La note enchantée</h2>
                                 <p class="section__text">Charonne</p>
+                                </div>
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </a>
                     </article>
-                    <article class="sectionrestaurant__article">
+                    <article class="restaurants__card">
                         <a href="#">
-                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette blanche sur une table blanche">
-                            <div class="new__block">
-                                <p>Nouveau</p>
-                            </div>
-                            <div class="text__block">
+                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette blanche sur une table blanche" class="card__img">
+                            <div class="white__block">
+                                <div class="text__block">
                                 <h2 class="section__subtitle">À la française</h2>
                                 <p class="section__text">Cité Rouge</p>
+                                </div>
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </a>
                     </article>
-                    <article class="sectionrestaurant__article">
+                    <article class="restaurants__card">
                         <a href="#">
-                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette longue sur une table rouge">
-                            <div class="new__block">
-                                <p>Nouveau</p>
-                            </div>
-                            <div class="text__block">
+                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'un plat gastronomique servi dans une assiette longue sur une table rouge" class="card__img">
+                            <div class="white__block">
+                                <div class="text__block">
                                 <h2 class="section__subtitle">Le délice des sens</h2>
                                 <p class="section__text">Folie-Méricourt</p>
+                                </div>
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </a>
