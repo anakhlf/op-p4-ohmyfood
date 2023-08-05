@@ -24,7 +24,7 @@ body {
   line-height: 28.13px;
 }
 .maincontent .section__p {
-  font-weight: 100;
+  font-weight: 300;
   font-size: 18px;
   line-height: 21.09px;
 }
@@ -96,16 +96,17 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   border-radius: 25px;
   margin-top: 27px;
   margin-bottom: 57px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
 }
 .reservation .section__button p {
   color: white;
 }
 
+/*** Fonctionnement ***/
 .fonctionnement {
   display: flex;
   flex-direction: column;
@@ -116,30 +117,40 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12.5px;
 }
 .fonctionnement__article .fonctionnementarticle__number {
   background-color: #9356DC;
   height: 24px;
   width: 24px;
   border-radius: 25px;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 14px;
+  z-index: 2;
 }
 .fonctionnement__article .fonctionnementarticle__block {
   background-color: #F6F6F6;
   height: 72.38px;
-  width: 322.5px;
+  width: 100%;
   border-radius: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 23px;
+  margin-left: -12px;
+  z-index: 1;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+.fonctionnement__article .fonctionnementarticle__block .fa-solid {
+  color: #7E7E7E;
+  padding-left: 31px;
+}
+.fonctionnement__article .fonctionnementarticle__block .fa-store {
+  color: #9356DC;
+}
 
+/*** Restaurants ***/
 .restaurants {
   background-color: #F6F6F6;
   padding: 54px 20px 66px 20px;
@@ -169,6 +180,7 @@ p {
   border-radius: 2px;
   position: absolute;
   margin-top: 13px;
+  right: 30px;
 }
 .restaurants__card .white__block {
   height: 76px;
@@ -182,6 +194,38 @@ p {
   display: flex;
   flex-direction: column;
 }
-.restaurants__card .white__block .fa-regular {
+.restaurants__card .white__block .fa-regular, .restaurants__card .white__block .fa-solid {
   font-size: 22px;
+}
+.restaurants__card .white__block .fa-gradient {
+  background: linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*** Footer ***/
+footer {
+  background-color: #353535;
+  padding: 22px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .footer__logo {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+footer .footer__iconandlink, footer a {
+  display: flex;
+  color: white;
+  gap: 11px;
+}
+footer .footer__iconandlink .footer__icon, footer a .footer__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13px;
+  font-size: 12px;
 }
