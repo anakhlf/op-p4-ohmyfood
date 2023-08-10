@@ -129,6 +129,7 @@ p {
         border-radius: 25px ;
         margin-top: 27px;
         margin-bottom: 57px;
+        border: none;
         @include box-shadow;
         @include lineargradientbg;
     }
@@ -161,7 +162,7 @@ p {
             font-size: 14px;
             z-index: 2;
         }
-        .fonctionnementarticle__block {
+        .fonctionnement-article__block {
             background-color: $bg-color;
             height:72.38px;
             width: 100%;

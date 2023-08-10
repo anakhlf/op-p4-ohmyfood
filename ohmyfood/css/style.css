@@ -98,6 +98,7 @@ p {
   border-radius: 25px;
   margin-top: 27px;
   margin-bottom: 57px;
+  border: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
 }
@@ -130,7 +131,7 @@ p {
   font-size: 14px;
   z-index: 2;
 }
-.fonctionnement__article .fonctionnementarticle__block {
+.fonctionnement__article .fonctionnement-article__block {
   background-color: #F6F6F6;
   height: 72.38px;
   width: 100%;
@@ -142,11 +143,11 @@ p {
   z-index: 1;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-.fonctionnement__article .fonctionnementarticle__block .fa-solid {
+.fonctionnement__article .fonctionnement-article__block .fa-solid {
   color: #7E7E7E;
   padding-left: 31px;
 }
-.fonctionnement__article .fonctionnementarticle__block .fa-store {
+.fonctionnement__article .fonctionnement-article__block .fa-store {
   color: #9356DC;
 }
 
@@ -166,8 +167,7 @@ p {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 .restaurants__card .card__img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0 0;
