@@ -105,7 +105,7 @@ p {
   object-fit: cover;
 }
 .maincontent .firs-section__menu {
-  border-radius: 45px;
+  border-radius: 45px 45px 0 0;
   margin-top: -55px;
   padding: 32px 17px 40px 17px;
 }
@@ -118,11 +118,35 @@ p {
 .maincontent .section__menu .menu__header {
   display: flex;
   align-items: center;
-  gap: 35px;
+  justify-content: space-between;
 }
-.maincontent .section__menu .menu__header .fa-heart {
-  font-size: 22px;
+.maincontent .section__menu .menu__header .fa-regular {
+  font-size: 23px;
   -webkit-text-stroke: 0.5px #F6F6F6;
+  transition: opacity 0.2s ease-in;
+  padding-right: 24.5px;
+}
+.maincontent .section__menu .menu__header .fa-regular:hover {
+  opacity: 0;
+}
+.maincontent .section__menu .menu__header .fa-regular:hover:not {
+  opacity: 1;
+}
+.maincontent .section__menu .menu__header .fa-solid {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  right: 41px;
+  font-size: 23px;
+  transition: opacity 0.15s ease-in;
+}
+.maincontent .section__menu .menu__header .fa-solid:hover {
+  opacity: 1;
+}
+.maincontent .section__menu .menu__header .fa-solid:hover:not {
+  opacity: 0;
 }
 .maincontent .section__menu .section__button {
   width: 218px;
@@ -133,6 +157,15 @@ p {
   border-radius: 25px;
   margin: auto;
   border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  transition: all 0.4s ease-in;
+}
+.maincontent .section__menu .section__button:hover {
+  background: linear-gradient(0deg, #a16be0, #ff93e1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+.maincontent .section__menu:hover:not {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
 }
@@ -149,17 +182,58 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 12px;
   background-color: white;
   width: 100%;
   border-radius: 15px;
   align-items: end;
-  padding: 13.5px 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .maincontent .subsection__menu .menu__listdishes .block__dish {
   display: flex;
   flex-direction: column;
+  padding: 13.5px 15px;
+  overflow: hidden;
+}
+.maincontent .subsection__menu .menu__listdishes .block__dish .menu__dishname, .maincontent .subsection__menu .menu__listdishes .block__dish .menu__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.maincontent .subsection__menu .menu__listdishes .block__price-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 15px;
+}
+.maincontent .subsection__menu .menu__listdishes .block__price-button .menu__price {
+  padding-bottom: 15px;
+}
+.maincontent .subsection__menu .menu__listdishes .block__price-button .menu__button-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  width: 0;
+  height: 69px;
+  transition: width 0.3s ease-in;
+  overflow: hidden;
+}
+.maincontent .subsection__menu .menu__listdishes .block__price-button .menu__button-bg .menu__checked-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #99E2D0;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: white;
+  transition: width 0.3s ease-in;
+}
+.maincontent .subsection__menu .menu__listdishes:hover .menu__button-bg {
+  width: 59px;
 }
 
 /*** Footer ***/
@@ -187,4 +261,45 @@ footer .footer__iconandlink .footer__icon, footer a .footer__icon {
   align-items: center;
   width: 13px;
   font-size: 12px;
+}
+
+/*** version ordinateur***/
+@media (min-width: 1024px) {
+  .maincontent .section__menu .menu__header {
+    justify-content: center;
+    gap: 25px;
+  }
+  .maincontent .section__menu .menu__header .fa-solid {
+    opacity: 0;
+    position: relative;
+    right: auto;
+    margin-left: -73px;
+  }
+  .firs-section__menu {
+    margin: 0px 13.4%;
+  }
+  .firs-section__menu .subsection__menu {
+    padding-left: 18.5%;
+    padding-right: 18.5%;
+  }
+  footer {
+    flex-direction: row;
+    justify-content: end;
+    padding: 57px 0 35px 0;
+  }
+  footer .footer__logo {
+    order: 2;
+    margin: 0px 90px 0px 16px;
+  }
+  footer .footer__icon-and-link {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+  }
+  footer .footer__icon-and-link--size {
+    width: 190px;
+  }
+  footer .footer__icon-and-link--size2 {
+    width: 130px;
+  }
 }

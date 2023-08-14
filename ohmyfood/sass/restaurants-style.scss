@@ -17,8 +17,20 @@ $lign-blue-color: #99E2D0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+@mixin box-shadow-hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
 @mixin lineargradientbg {
     background-image: linear-gradient(0deg, $primary-color, #FF79DA);
+}
+
+@mixin lineargradientbg-hover {
+    background: linear-gradient(0deg, lighten($primary-color, 5%), lighten(#FF79DA, 5%));
+}
+
+@mixin lineargradientcolor {
+    background: linear-gradient(0deg,#FF79DA, $primary-color,);
 }
 
 
@@ -135,7 +147,7 @@ p {
         object-fit: cover;
     }
     .firs-section__menu {
-        border-radius: 45px;
+        border-radius: 45px 45px 0 0;
         margin-top: -55px;
         padding: 32px 17px 40px 17px;
     }
@@ -147,11 +159,37 @@ p {
         .menu__header {
             display: flex;
             align-items: center;
-            gap: 35px;
-            .fa-heart {
-                font-size: 22px;
+            justify-content: space-between;
+            .fa-regular {
+                font-size: 23px;
                 -webkit-text-stroke: 0.5px $bg-color;
+                transition: opacity 0.2s ease-in;
+                padding-right: 24.5px;
+                &:hover {
+                    opacity: 0;
+                }
+                &:hover:not {
+                    opacity: 1;
+                }  
             }
+
+            .fa-solid {
+                position: absolute;
+                opacity: 0;
+                @include lineargradientcolor;
+	            -webkit-background-clip: text;
+	            -webkit-text-fill-color: transparent;
+                right: 41px;
+                font-size: 23px;
+                transition: opacity 0.15s ease-in;
+                &:hover {
+                    opacity: 1;
+                }
+                &:hover:not {
+                    opacity: 0;
+                }  
+            }
+
         }
         .section__button {
         width: 218px;
@@ -164,7 +202,17 @@ p {
         border: none;
         @include box-shadow;
         @include lineargradientbg;
+        transition: all 0.4s ease-in;
+        &:hover {
+            @include lineargradientbg-hover;
+            @include box-shadow-hover;
+            }
         }
+        &:hover:not {
+            @include box-shadow;
+            @include lineargradientbg;
+            }
+        
         .section__button p {
             color: white;
         }
@@ -178,26 +226,61 @@ p {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            gap: 12px;
             background-color: white;
             width: 100%;
             border-radius: 15px;
             align-items: end;
-            padding: 13.5px 15px;
             @include box-shadow-menu;
             .block__dish {
                 display: flex;
                 flex-direction: column;
+                padding: 13.5px 15px;
+                overflow: hidden;
+                .menu__dishname, .menu__text {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .block__price-button {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: end;
+                gap: 15px;
+                .menu__price {
+                    padding-bottom: 15px;
+                }
+                .menu__button-bg {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color:$green-color;
+                    border-radius: 0 15px 15px 0;
+                    width: 0;
+                    height: 69px;
+                    transition: width 0.3s ease-in;
+                    overflow: hidden;
+                    .menu__checked-button {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 14px;
+                        color: $green-color;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 15px;
+                        background-color: white;
+                        transition: width 0.3s ease-in;
+                    }
+                }
+            }  
+            &:hover .menu__button-bg {
+                width: 59px;
             }
         }
     }
 }
-
-
-
-
-
-
 
 
 /*** Footer ***/
@@ -229,4 +312,51 @@ footer {
         }
         
     }
+
+/*** version ordinateur***/
+
+@media (min-width : 1024px) {
+
+    .maincontent .section__menu .menu__header { 
+        justify-content: center;
+        gap: 25px;
+        .fa-solid {
+            opacity: 0;
+            position: relative;
+            right: auto;
+            margin-left: -73px;
+            
+        }
+    }
+    .firs-section__menu {
+        margin: 0px 13.40%;
+        .subsection__menu {
+            padding-left: 18.5%;
+            padding-right: 18.5%;
+        }
+    }
+    footer {
+        flex-direction: row;
+        justify-content: end;
+        padding: 57px 0 35px 0;
+        .footer__logo {
+            order: 2;
+            margin: 0px 90px 0px 16px;
+        }
+        .footer__icon-and-link {
+            display: flex;
+            gap: 11px;
+            align-items: center;
+            
+        }
+        .footer__icon-and-link--size {
+            width: 190px;
+        }
+
+        .footer__icon-and-link--size2 {
+            width: 130px;
+        }
+
+    }
+}
 

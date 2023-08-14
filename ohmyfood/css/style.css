@@ -258,7 +258,7 @@ footer .footer__icon-and-link .footer__icon, footer a .footer__icon {
   font-size: 12px;
 }
 
-/*** version tablette ***/
+/*** version ordinateur***/
 @media (min-width: 1024px) {
   .reservation .section__title {
     font-size: 40px;
