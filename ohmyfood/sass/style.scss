@@ -139,9 +139,10 @@ p {
         border: none;
         @include box-shadow;
         @include lineargradientbg;
+        opacity: 1;
         transition: all 0.2s ease-in;
         &:hover {
-            @include lineargradientbg-hover;
+            opacity: 0.75;
             @include box-shadow-hover;
         }
     }
