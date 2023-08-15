@@ -69,7 +69,7 @@ a {
 
 p {
     font-weight: 500;
-    font: 16px;
+    font-size: 16px;
     line-height: 18.75px;
 }
 
@@ -130,6 +130,9 @@ p {
     .section__button {
         width: 218px;
         height: 50px;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -146,10 +149,6 @@ p {
             @include box-shadow-hover;
         }
     }
-
-    .section__button p {
-        color: white;
-    }
 }
 
 /*** Fonctionnement ***/
@@ -160,11 +159,11 @@ p {
     flex-direction: column;
     padding: 48px 20px 68px 20px;
     gap: 25px;
-    &__article {
+    &__div {
         display: flex;
         flex-direction: row;
         align-items: center;
-        .fonctionnementarticle__number {
+        .fonctionnement-div__number {
             background-color: $primary-color;
             height: 24px;
             width: 24px;
@@ -176,7 +175,7 @@ p {
             font-size: 14px;
             z-index: 2;
         }
-        .fonctionnement-article__block {
+        .fonctionnement-div__block {
             background-color: $bg-color;
             height:72.38px;
             width: 100%;
@@ -220,6 +219,11 @@ p {
             height: 174px;
             border-radius: 15px 15px 0 0 ;
         }
+
+        .section__text {
+            font-size: 17px;
+            font-weight: 300;
+        }
         .new__block {
             background-color: $green-color;
             width: 80px;
@@ -234,29 +238,29 @@ p {
             right: calc(100% - 96%);   
         }
         .white__block {
-            height: 76px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-left: 13px;
             padding-right: 25px;
-
             .text__block {
                 display: flex;
                 flex-direction: column;
             }
+            .section__subtitle {
+                margin-top: 14px;
+                margin-bottom: 5px;
+                font-size: 18px;
+            }
 
             .fa-regular {
-                display: relative;
                 font-size: 23px;
                 -webkit-text-stroke: 0.5px $bg-color;
                 transition: opacity 0.2s ease-in;
                 &:hover {
                     opacity: 0;
                 }
-                &:hover:not {
-                    opacity: 1;
-                }  
+                
             }
 
             .fa-solid {
@@ -270,9 +274,6 @@ p {
                 transition: opacity 0.15s ease-in;
                 &:hover {
                     opacity: 1;
-                }
-                &:hover:not {
-                    opacity: 0;
                 }  
             }
         }
@@ -293,7 +294,7 @@ footer {
         font-family: 'Shrikhand', cursive;
         color: white;
         font-size: 18px;
-        letter-spacing: 1px;
+        font-weight: 400;
         }
     .footer__icon-and-link, a {
         display: flex;
@@ -314,11 +315,28 @@ footer {
 
 @media (min-width : 1024px) {
 
-    .reservation {
-        .section__title {
-            font-size: 40px;
+    .navbar {
+        .navbar__divlogo {
+            height: 96px;
+            .divlogo__logo {
+                width: 200px;
+            }
         }
     }
+
+    .reservation {
+        gap: 35px;
+        .section__title {
+            margin: auto;
+            margin-top: 30px;
+            font-size: 40px;
+        }
+        .section__button {
+            margin: auto;
+            margin-bottom:30px;
+        }
+    }
+
 
     .fonctionnement { 
         display: grid;
@@ -345,6 +363,10 @@ footer {
            }
         .restaurants__card--margin {
             margin-top: 25px;
+        }
+        .restaurants__card {
+            background-color: white;
+            box-shadow: none;
         }
     }
 
