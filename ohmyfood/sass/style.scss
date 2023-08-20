@@ -24,10 +24,6 @@ $light-grey-color: #EAEAEA;
     background: linear-gradient(0deg, $primary-color, #FF79DA);
 }
 
-@mixin lineargradientbg-hover {
-    background: linear-gradient(0deg, lighten($primary-color, 5%), lighten(#FF79DA, 5%));
-}
-
 @mixin lineargradientcolor {
     background: linear-gradient(0deg,#FF79DA, $primary-color,);
 }
@@ -257,6 +253,7 @@ p {
                 font-size: 23px;
                 -webkit-text-stroke: 0.5px $bg-color;
                 transition: opacity 0.2s ease-in;
+                opacity: 1;
                 &:hover {
                     opacity: 0;
                 }
