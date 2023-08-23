@@ -1,4 +1,6 @@
 /***** General *****/
+/** Variables **/
+/** Mixin **/
 * {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -95,43 +97,43 @@ p {
 
 /***** Main content *****/
 /***Content section***/
-.maincontent {
+.maincontent-restaurant {
   display: flex;
   flex-direction: column;
 }
-.maincontent .maincontent__img {
+.maincontent-restaurant .maincontent__img {
   width: 100%;
   height: 275px;
   object-fit: cover;
   object-position: center;
 }
-.maincontent .firs-section__menu {
+.maincontent-restaurant .firs-section__menu {
   border-radius: 45px 45px 0 0;
   margin-top: -55px;
   padding: 32px 17px 40px 17px;
 }
-.maincontent .section__menu {
+.maincontent-restaurant .section__menu {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-.maincontent .section__menu .menu__header {
+.maincontent-restaurant .section__menu .menu__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.maincontent .section__menu .menu__header .fa-regular {
+.maincontent-restaurant .section__menu .menu__header .fa-regular {
   font-size: 23px;
   -webkit-text-stroke: 0.5px #F6F6F6;
   transition: opacity 0.2s ease-in;
   padding-right: 24.5px;
   opacity: 1;
 }
-.maincontent .section__menu .menu__header .fa-regular:hover {
+.maincontent-restaurant .section__menu .menu__header .fa-regular:hover {
   opacity: 0;
 }
-.maincontent .section__menu .menu__header .fa-solid {
+.maincontent-restaurant .section__menu .menu__header .fa-solid {
   position: absolute;
   opacity: 0;
   background: linear-gradient(0deg, #FF79DA, #9356DC);
@@ -141,10 +143,10 @@ p {
   font-size: 23px;
   transition: opacity 0.15s ease-in;
 }
-.maincontent .section__menu .menu__header .fa-solid:hover {
+.maincontent-restaurant .section__menu .menu__header .fa-solid:hover {
   opacity: 1;
 }
-.maincontent .section__menu .section__button {
+.maincontent-restaurant .section__menu .section__button {
   width: 218px;
   height: 50px;
   display: flex;
@@ -161,14 +163,14 @@ p {
   opacity: 1;
   transition: all 0.2s ease-in;
 }
-.maincontent .section__menu .section__button:hover {
+.maincontent-restaurant .section__menu .section__button:hover {
   opacity: 0.75;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
-.maincontent .section__menu .section__button p {
+.maincontent-restaurant .section__menu .section__button p {
   color: white;
 }
-.maincontent .section__menu .subsection__menu {
+.maincontent-restaurant .section__menu .subsection__menu {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -177,13 +179,13 @@ p {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   animation: appear 0.5s ease-in-out forwards;
 }
-.maincontent .section__menu .subsection__menu:nth-child(2) {
+.maincontent-restaurant .section__menu .subsection__menu:nth-child(2) {
   animation-delay: 0.2s;
 }
-.maincontent .section__menu .subsection__menu:nth-child(3) {
+.maincontent-restaurant .section__menu .subsection__menu:nth-child(3) {
   animation-delay: 0.4s;
 }
-.maincontent .section__menu .subsection__menu:nth-child(4) {
+.maincontent-restaurant .section__menu .subsection__menu:nth-child(4) {
   animation-delay: 0.6s;
 }
 @keyframes appear {
@@ -192,7 +194,7 @@ p {
     transform: translateX(0);
   }
 }
-.maincontent .section__menu .menu__listdishes {
+.maincontent-restaurant .section__menu .menu__listdishes {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -203,28 +205,28 @@ p {
   align-items: end;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-.maincontent .section__menu .menu__listdishes .block__dish {
+.maincontent-restaurant .section__menu .menu__listdishes .block__dish {
   display: flex;
   flex-direction: column;
   padding: 13.5px 15px;
   overflow: hidden;
 }
-.maincontent .section__menu .menu__listdishes .block__dish .menu__dishname, .maincontent .section__menu .menu__listdishes .block__dish .menu__text {
+.maincontent-restaurant .section__menu .menu__listdishes .block__dish .menu__dishname, .maincontent-restaurant .section__menu .menu__listdishes .block__dish .menu__text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.maincontent .section__menu .menu__listdishes .block__price-button {
+.maincontent-restaurant .section__menu .menu__listdishes .block__price-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: end;
   gap: 15px;
 }
-.maincontent .section__menu .menu__listdishes .block__price-button .menu__price {
+.maincontent-restaurant .section__menu .menu__listdishes .block__price-button .menu__price {
   padding-bottom: 15px;
 }
-.maincontent .section__menu .menu__listdishes .block__price-button .menu__button-bg {
+.maincontent-restaurant .section__menu .menu__listdishes .block__price-button .menu__button-bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -235,7 +237,7 @@ p {
   transition: width 0.3s ease-in;
   overflow: hidden;
 }
-.maincontent .section__menu .menu__listdishes .block__price-button .menu__button-bg .menu__checked-button {
+.maincontent-restaurant .section__menu .menu__listdishes .block__price-button .menu__button-bg .menu__checked-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,7 +249,7 @@ p {
   background-color: white;
   transition: width 0.3s ease-in;
 }
-.maincontent .section__menu .menu__listdishes:hover .menu__button-bg {
+.maincontent-restaurant .section__menu .menu__listdishes:hover .menu__button-bg {
   width: 59px;
 }
 
