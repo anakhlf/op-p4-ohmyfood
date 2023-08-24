@@ -104,7 +104,6 @@ footer .footer__icon-and-link .footer__icon, footer a .footer__icon {
   justify-content: center;
   align-items: center;
   background-color: #F6F6F6;
-  min-width: 320px;
   width: 100%;
   height: 100%;
   z-index: 3;
