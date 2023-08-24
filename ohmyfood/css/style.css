@@ -405,13 +405,13 @@ footer .footer__icon-and-link .footer__icon, footer a .footer__icon {
 }
 .maincontent-restaurant .section__menu .menu__header .fa-solid {
   position: absolute;
-  opacity: 0;
   background: linear-gradient(0deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   right: 41px;
   font-size: 23px;
   transition: opacity 0.15s ease-in;
+  opacity: 0;
 }
 .maincontent-restaurant .section__menu .menu__header .fa-solid:hover {
   opacity: 1;

@@ -463,16 +463,15 @@ footer {
                     opacity: 0;
                 }
             }
-
             .fa-solid {
                 position: absolute;
-                opacity: 0;
                 @include lineargradientcolor;
 	            -webkit-background-clip: text;
 	            -webkit-text-fill-color: transparent;
                 right: 41px;
                 font-size: 23px;
                 transition: opacity 0.15s ease-in;
+                opacity: 0;
                 &:hover {
                     opacity: 1;
                 }
